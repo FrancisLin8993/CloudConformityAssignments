@@ -1,0 +1,14 @@
+.ContentHeader {
+  overflow: hidden;
+  height: 540px;
+  background: #6d4b92;
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, #6d4b92),
+    color-stop(50%, #885a9f),
+    color-stop(100%, #6e3e91)
+  );
+  background: linear-gradient(135deg, #6d4b92 0%, #885a9f 50%, #6e3e91 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d4b92', endColorstr='#6e3e91', GradientType=1 );
+}
