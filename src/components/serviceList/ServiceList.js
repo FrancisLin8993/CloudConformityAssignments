@@ -11,7 +11,10 @@ import {
   generateLinks,
   addLinkAttributeToArray
 } from '../../utils/helpers';
-import { awsServicesDescriptions } from '../../utils/serviceItemsDesc';
+import {
+  awsServicesDescriptions,
+  azureServiceDescriptions
+} from '../../utils/serviceItemsDesc';
 import ServiceItem from '../serviceItem/ServiceItem';
 import { CLOUD_CONFORMITY_BASE_URL, PROXY_URL } from '../../apis/apiUtils';
 
@@ -43,7 +46,7 @@ class ServiceList extends React.Component {
 
   // Render a row. Each row contains two ServiceItems.
   renderRow = (rowItem, index) => {
-    return (
+    return rowItem.length % 2 == 0 ? (
       <Row key={index}>
         <Col>
           <ServiceItem
@@ -60,6 +63,17 @@ class ServiceList extends React.Component {
           />
         </Col>
       </Row>
+    ) : (
+      <Row key={index}>
+        <Col>
+          <ServiceItem
+            title={rowItem[0].title}
+            description={rowItem[0].description}
+            link={rowItem[0].link}
+          />
+        </Col>
+        <Col></Col>
+      </Row>
     );
   };
 
@@ -68,6 +82,7 @@ class ServiceList extends React.Component {
     if (providerName === AWS) {
       return awsServicesDescriptions;
     } else if (providerName === AZURE) {
+      return azureServiceDescriptions;
     }
   };
 

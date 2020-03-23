@@ -13,31 +13,39 @@ it('renders without crashing', () => {
   ReactDOM.render(<ServiceList />, div);
 });
 
-describe('<ServiceList />', () => {
-  const wrapper = shallow(<ServiceList providerName="aws" />);
-  const instance = wrapper.instance();
+it('calls componentDidMount', () => {
+  sinon.spy(ServiceList.prototype, 'componentDidMount');
+  const wrapper = mount(<ServiceList />);
+  expect(ServiceList.prototype.componentDidMount).toHaveProperty(
+    'callCount',
+    1
+  );
+});
+
+describe('test children elements', () => {
+  const wrapper1 = shallow(<ServiceList providerName="aws" />);
+  const instance1 = wrapper1.instance();
+  const wrapper2 = shallow(<ServiceList providerName="azure" />);
+  const instance2 = wrapper2.instance();
 
   it('loads data correctly', () => {
-    const data = instance.loadData('aws');
-    expect(data).toHaveLength(6);
-  });
-
-  it('calls componentDidMount', () => {
-    sinon.spy(ServiceList.prototype, 'componentDidMount');
-    const wrapper = mount(<ServiceList />);
-    expect(ServiceList.prototype.componentDidMount).toHaveProperty(
-      'callCount',
-      1
-    );
+    const data1 = instance1.loadData('aws');
+    const data2 = instance2.loadData('azure');
+    expect(data1).toHaveLength(6);
+    expect(data2).toHaveLength(7);
   });
 
   it('render rows and columns correctly', () => {
-    expect(wrapper.find(Container)).toHaveLength(1);
-    expect(wrapper.find(Row)).toHaveLength(3);
-    expect(wrapper.find(Col)).toHaveLength(6);
+    expect(wrapper1.find(Container)).toHaveLength(1);
+    expect(wrapper2.find(Container)).toHaveLength(1);
+    expect(wrapper1.find(Row)).toHaveLength(3);
+    expect(wrapper2.find(Row)).toHaveLength(4);
+    expect(wrapper1.find(Col)).toHaveLength(6);
+    expect(wrapper2.find(Col)).toHaveLength(8);
   });
 
   it('render items correctly', () => {
-    expect(wrapper.find(ServiceItem)).toHaveLength(6);
+    expect(wrapper1.find(ServiceItem)).toHaveLength(6);
+    expect(wrapper2.find(ServiceItem)).toHaveLength(7);
   });
 });

@@ -33,3 +33,46 @@ export const awsServicesDescriptions = [
     link: ''
   }
 ];
+
+export const azureServiceDescriptions = [
+  {
+    title: 'Access Control',
+    description:
+      'Microsoft Azure Active Directory Access Control (also known as Access Control Service or ACS) is a cloud-based service that provides an easy way of authenticating and authorizing users to gain access to your web applications and services',
+    link: ''
+  },
+  {
+    title: 'Active Directory',
+    description:
+      'Azure Active Directory provides an identity platform with enhanced security, access management, scalability, and reliability for connecting users with all the apps they need.',
+    link: ''
+  },
+  {
+    title: 'Activity Log',
+    description:
+      'The Azure Activity Log provides insight into subscription-level events that have occurred in Azure',
+    link: ''
+  },
+  {
+    title: 'Database Services',
+    description:
+      'Azure SQL Database is the intelligent, scalable, cloud database service',
+    link: ''
+  },
+  {
+    title: 'Logging and Monitoring',
+    description: 'Network logging and monitoring in Azure',
+    link: ''
+  },
+  {
+    title: 'Security Center',
+    description: 'Security posture management for cloud workloads',
+    link: ''
+  },
+  {
+    title: 'Storage Accounts',
+    description:
+      'An Azure storage account contains all of your Azure Storage data objects',
+    link: ''
+  }
+];

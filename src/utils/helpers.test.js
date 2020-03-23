@@ -68,6 +68,22 @@ describe('tests related to cloudconformity json response', () => {
               ]
             }
           }
+        },
+        {
+          type: 'services',
+          id: 'StorageAccounts',
+          attributes: { name: 'StorageAccounts', provider: 'azure' },
+          relationships: {
+            rules: {
+              data: [
+                { type: 'rules', id: 'StorageAccounts-001' },
+                { type: 'rules', id: 'StorageAccounts-002' },
+                { type: 'rules', id: 'StorageAccounts-003' },
+                { type: 'rules', id: 'StorageAccounts-004' },
+                { type: 'rules', id: 'StorageAccounts-005' }
+              ]
+            }
+          }
         }
       ]
     };
@@ -76,11 +92,15 @@ describe('tests related to cloudconformity json response', () => {
   it('should return an array of attributes inside the response of cloud conformity api', () => {
     const result = filterAttributes(json);
 
-    expect(result.length).toEqual(2);
+    expect(result.length).toEqual(3);
     expect(result[0].name).toEqual('EBS');
     expect(result[0].provider).toEqual('aws');
     expect(result[1].name).toEqual('Route53');
     expect(result[1].provider).toEqual('aws');
+    expect(result[1].name).toEqual('Route53');
+    expect(result[1].provider).toEqual('aws');
+    expect(result[2].name).toEqual('StorageAccounts');
+    expect(result[2].provider).toEqual('azure');
   });
 
   it('should return the correct link', () => {
