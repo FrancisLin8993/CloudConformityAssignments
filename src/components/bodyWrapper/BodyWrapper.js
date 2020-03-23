@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentHeader from '../contentHeader/ContentHeader';
 import ProviderLandingPage from '../providerLandingPage/ProviderLandingPage';
-import FooterButton from '../footerButton/Footerbutton';
+import FooterButton from '../footerButton/FooterButton';
 
 function BodyWrapper() {
   return (

@@ -1,4 +1,5 @@
 import React from 'react';
+import './FooterButton.css';
 
 function FooterButton() {
   return (
@@ -18,7 +19,9 @@ function FooterButton() {
         to set up your onboarding session and start a free trial.
       </p>
       <br />
-      <a href="#chat">Let's Chat</a>
+      <a className="btn-cta" href="#chat">
+        Let's Chat
+      </a>
     </div>
   );
 }

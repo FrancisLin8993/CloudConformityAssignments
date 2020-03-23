@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css?display=swap&family=Roboto+Mono|Roboto:300,400,400i,700&subset=latin,latin-ext');
+
+@font-face {
+  font-family: 'Volte-Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Volte Medium'),
+    url('./assets/fonts/Volte Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Volte-Semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Volte Semibold'),
+    url('./assets/fonts/Volte Semibold.woff') format('woff');
+}
+
 body {
   font-family: 'Roboto', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
@@ -11,4 +29,43 @@ body {
 
 code {
   font-family: 'Roboto', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Volte-Semibold';
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+  font-size-adjust: none;
+  -moz-font-size-adjust: none;
+  -webkit-font-size-adjust: none;
+}
+
+a,
+a:hover {
+  cursor: pointer;
+  outline: none;
+}
+
+a img {
+  border: none;
 }
