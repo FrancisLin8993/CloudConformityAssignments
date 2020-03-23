@@ -2,6 +2,7 @@
 export const KNOWLEDGE_BASE_URL = 'https://cloudconformity.com/knowledge-base/';
 export const AWS = 'aws';
 export const AZURE = 'azure';
+export const CONFORMITY = 'conformity';
 // split an array into arrays that each array contains two items.
 export function splitArray(arr) {
   let rowsArray = [];

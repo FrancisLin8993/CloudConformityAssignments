@@ -4,6 +4,7 @@ import ProviderLandingPage from './ProviderLandingPage';
 import KnowledgeBaseInfo from '../knowledgeBaseInfo/KnowledgeBaseInfo';
 import ServiceList from '../serviceList/ServiceList';
 import { shallow } from 'enzyme';
+import ProviderSelection from '../providerSelection/ProviderSelection';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -16,5 +17,6 @@ describe('test rendering children', () => {
   it('renders knowledge base info component', () => {
     expect(wrapper.find(ServiceList)).toHaveLength(2);
     expect(wrapper.find(KnowledgeBaseInfo)).toHaveLength(1);
+    expect(wrapper.find(ProviderSelection)).toHaveLength(1);
   });
 });
