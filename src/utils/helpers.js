@@ -32,10 +32,11 @@ export function filterAttributes(response) {
   return attributeArray;
 }
 
-export function generateLinks(arr) {
+export function generateLinks(arr, providerName) {
   const linksArray = [];
   if (arr instanceof Array) {
-    arr.forEach(element => {
+    const filteredArr = arr.filter(element => element.provider == providerName);
+    filteredArr.forEach(element => {
       const linkString = `${element.provider}/${element.name}`;
       linksArray.push(linkString);
     });

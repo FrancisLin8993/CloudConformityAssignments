@@ -85,7 +85,7 @@ describe('tests related to cloudconformity json response', () => {
 
   it('should return the correct link', () => {
     const attributesArr = filterAttributes(json);
-    const linksArr = generateLinks(attributesArr);
+    const linksArr = generateLinks(attributesArr, 'aws');
 
     expect(linksArr.length).toEqual(2);
     expect(linksArr[0]).toEqual('aws/EBS');
