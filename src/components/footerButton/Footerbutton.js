@@ -2,7 +2,24 @@ import React from 'react';
 
 function FooterButton() {
   return (
-    <div></div>
+    <div>
+      <p>
+        Whether your AWS exploration is just starting to take shape, you’re
+        mid-way through a migration or you’re already running complex workloads
+        in the cloud, Cloud Conformity offers full visibility of your
+        infrastructure and provides continuous assurance it’s secure, optimized
+        and compliant.
+      </p>
+      <br />
+      <p>
+        <a href="#chat">
+          <strong>Chat with us</strong>
+        </a>{' '}
+        to set up your onboarding session and start a free trial.
+      </p>
+      <br />
+      <a href="#chat">Let's Chat</a>
+    </div>
   );
 }
 

@@ -16,6 +16,7 @@ import {
   azureServiceDescriptions
 } from '../../utils/serviceItemsDesc';
 import ServiceItem from '../serviceItem/ServiceItem';
+import ServiceProviderHeading from '../serviceProviderHeading/ServiceProviderHeading';
 import { CLOUD_CONFORMITY_BASE_URL, PROXY_URL } from '../../apis/apiUtils';
 
 // Render a serviceList.
@@ -92,7 +93,12 @@ class ServiceList extends React.Component {
     const serviceItemList = splittedArray.map(rowItem =>
       this.renderRow(rowItem, data.indexOf(rowItem[0]))
     );
-    return <Container>{serviceItemList}</Container>;
+    return (
+      <div>
+        <ServiceProviderHeading {...this.props} />
+        <Container>{serviceItemList}</Container>
+      </div>
+    );
   }
 }
 
