@@ -8,9 +8,9 @@ function ProviderLandingPage() {
   return (
     <div>
       <KnowledgeBaseInfo />
-      <ProviderSelection />
-      <ServiceList providerName={AWS} />
-      <ServiceList providerName={AZURE} />
+      <ProviderSelection className="grid" />
+      <ServiceList providerName={AWS} className="grid" />
+      <ServiceList providerName={AZURE} className="grid" />
     </div>
   );
 }

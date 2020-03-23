@@ -11,7 +11,7 @@ function ContentHeader() {
     <div>
       <Jumbotron fluid className="ContentHeader">
         <Container fluid className="article">
-          <Row>
+          <Row className="grid">
             <Col>
               <h1>Knowledge Base</h1>
             </Col>

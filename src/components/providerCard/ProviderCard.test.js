@@ -26,7 +26,11 @@ describe('test props', () => {
 
 it('renders card correctly', () => {
   const wrapper = shallow(<ProviderCard />);
-
   expect(wrapper.find(Card)).toHaveLength(1);
+});
+
+it('renders card styles correctly', () => {
+  const wrapper = shallow(<ProviderCard />);
   expect(wrapper.find('.cta')).toHaveLength(1);
+  expect(wrapper.find({ border: 'light' })).toHaveLength(1);
 });

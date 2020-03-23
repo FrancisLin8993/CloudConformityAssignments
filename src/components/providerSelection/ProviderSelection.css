@@ -1,0 +1,68 @@
+.provider-selection {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  .provider-selection {
+    display: block;
+    background-color: white;
+    box-shadow: none;
+  }
+}
+
+.card {
+  max-width: 380px;
+  background-color: white;
+  display: block;
+  text-align: center;
+}
+
+.card:first-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card:last-child {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    width: 100%;
+    border: none !important;
+  }
+
+  .card img {
+    margin: auto;
+    display: block;
+  }
+}
+
+.card > * {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.card img {
+  max-width: 250px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.card a:not(.cta) {
+  color: #c6366e;
+}

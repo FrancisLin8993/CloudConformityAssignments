@@ -51,11 +51,12 @@ class ProviderCard extends React.Component {
 
   render() {
     return (
-      <Card>
+      <Card border="light">
         {this.renderImg()}
         <Card.Body>
           {this.renderButton()}
           <br />
+
           {this.renderLinks()}
         </Card.Body>
       </Card>

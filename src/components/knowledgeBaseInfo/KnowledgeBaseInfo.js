@@ -2,7 +2,7 @@ import React from 'react';
 
 function KnowledgeBaseInfo() {
   return (
-    <div>
+    <div className="grid">
       <h2>Knowledge Base</h2>
       <p>
         "Along with continuous assurance of your infrastructure, Cloud

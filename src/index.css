@@ -100,3 +100,16 @@ a.cta {
     line-height: 50px;
   }
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.grid {
+  max-width: 1170px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 50px;
+}
