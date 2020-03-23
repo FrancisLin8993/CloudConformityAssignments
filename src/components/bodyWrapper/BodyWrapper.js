@@ -5,7 +5,7 @@ import FooterButton from '../footerButton/Footerbutton';
 
 function BodyWrapper() {
   return (
-    <div>
+    <div id="section-body">
       <ContentHeader />
       <ProviderLandingPage />
       <FooterButton />
