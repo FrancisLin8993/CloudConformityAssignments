@@ -28,4 +28,5 @@ it('renders card correctly', () => {
   const wrapper = shallow(<ProviderCard />);
 
   expect(wrapper.find(Card)).toHaveLength(1);
+  expect(wrapper.find('.cta')).toHaveLength(1);
 });

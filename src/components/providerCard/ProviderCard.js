@@ -26,10 +26,17 @@ class ProviderCard extends React.Component {
 
   renderButton() {
     if (this.isProviderConformity()) {
-      return <Button variant="danger">Cloud Conformity Best Practices</Button>;
+      return (
+        <Card.Link className="cta" href="#">
+          Cloud Conformity Best Practices
+        </Card.Link>
+      );
     } else {
       return (
-        <Button variant="danger">{`${this.props.provider} supported Services`}</Button>
+        <Card.Link
+          className="cta"
+          href="#"
+        >{`${this.props.provider} supported Services`}</Card.Link>
       );
     }
   }

@@ -14,7 +14,7 @@ class ServiceProviderHeading extends React.Component {
         <div>
           <img alt="Service coverage for Amazon Web Services" src={awsLogo} />
           <br />
-          <a href={`${KNOWLEDGE_BASE_URL}${AWS}`}>
+          <a href={`${KNOWLEDGE_BASE_URL}${AWS}`} className="cta">
             View all {this.props.providerName} rules
           </a>
         </div>
@@ -24,7 +24,7 @@ class ServiceProviderHeading extends React.Component {
         <div>
           <img alt="Service coverage for Azure Services" src={azureLogo} />
           <br />
-          <a href={`${KNOWLEDGE_BASE_URL}${AZURE}`}>
+          <a href={`${KNOWLEDGE_BASE_URL}${AZURE}`} className="cta">
             View all {this.props.providerName} rules
           </a>
         </div>
@@ -33,7 +33,7 @@ class ServiceProviderHeading extends React.Component {
   }
   render() {
     return (
-      <div class="heading">
+      <div className="heading">
         <h3>Service Coverage for</h3>
         {this.renderImgAndLInk()}
       </div>

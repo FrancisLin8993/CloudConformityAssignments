@@ -13,3 +13,8 @@ it('renders children correctly', () => {
   expect(wrapper.find('p')).toHaveLength(2);
   expect(wrapper.find('a')).toHaveLength(2);
 });
+
+it('renders style correctly', () => {
+  const wrapper = shallow(<FooterButton />);
+  expect(wrapper.find('.btn-cta')).toHaveLength(1);
+});

@@ -31,4 +31,9 @@ describe('test props', () => {
     expect(wrapper.find('img')).toHaveLength(1);
     expect(wrapper.find('a')).toHaveLength(1);
   });
+
+  it('renders styles correctly', () => {
+    expect(wrapper.find('.cta')).toHaveLength(1);
+    expect(wrapper.find('.heading')).toHaveLength(1);
+  });
 });
