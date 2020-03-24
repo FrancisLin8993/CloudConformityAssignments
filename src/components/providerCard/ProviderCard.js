@@ -1,15 +1,11 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import { AWS, AZURE, CONFORMITY } from '../../utils/helpers';
 import awsLogo from '../../assets/logo-square-aws.png';
 import azureLogo from '../../assets/logo-square-azure.png';
 import conformityLogo from '../../assets/logo-square-trend-micro.png';
 
 class ProviderCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   isProviderConformity() {
     return this.props.provider === CONFORMITY;
   }

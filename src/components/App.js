@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
 import './App.css';
 import BodyWrapper from './bodyWrapper/BodyWrapper';
 import HeaderWrapper from './headerWrapper/HeaderWrapper';
