@@ -229,3 +229,11 @@ a.btn-cta {
     line-height: 50px;
   }
 }
+
+.column {
+  max-width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
