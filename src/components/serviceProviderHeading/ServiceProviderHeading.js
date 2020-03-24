@@ -5,9 +5,6 @@ import { AWS, AZURE, KNOWLEDGE_BASE_URL } from '../../utils/helpers';
 import './ServiceProviderHeading.css';
 
 class ServiceProviderHeading extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   renderImgAndLInk() {
     if (this.props.providerName == AWS) {
       return (
