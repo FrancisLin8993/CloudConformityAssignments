@@ -22,11 +22,13 @@ function ContentHeader() {
               </p>
             </Col>
           </Row>
-          <Row className="grid">
-            <Col>
-              <span>
-                <a href={KNOWLEDGE_BASE_URL}>Knowledge Base</a>
-              </span>
+          <Row className="grid sitemap">
+            <Col className="wrp">
+              <div className="nav">
+                <span>
+                  <a href={KNOWLEDGE_BASE_URL}>Knowledge Base</a>
+                </span>
+              </div>
             </Col>
           </Row>
         </Container>

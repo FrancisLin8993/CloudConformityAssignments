@@ -7,11 +7,11 @@ import FooterWrapper from './footerWrapper/FooterWrapper';
 
 function App() {
   return (
-    <Container className="App">
+    <div className="App">
       <HeaderWrapper />
       <BodyWrapper />
       <FooterWrapper />
-    </Container>
+    </div>
   );
 }
 
