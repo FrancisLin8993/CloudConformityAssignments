@@ -96,7 +96,7 @@ class ServiceList extends React.Component {
     return (
       <div className="grid copy provider">
         <ServiceProviderHeading {...this.props} />
-        <Container>{serviceItemList}</Container>
+        <Container className="service-list">{serviceItemList}</Container>
       </div>
     );
   }

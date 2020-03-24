@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ServiceItem from './ServiceItem';
 import Card from 'react-bootstrap/Card';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -34,4 +34,9 @@ describe('test props', () => {
     expect(wrapper.props().link).toEqual('test link');
     expect(wrapper.find(Card)).toHaveLength(1);
   });
+});
+
+it('renders styles correctly', () => {
+  const wrapper = shallow(<ServiceItem />);
+  expect(wrapper.find('.service-link')).toHaveLength(1);
 });

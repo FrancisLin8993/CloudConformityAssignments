@@ -11,7 +11,7 @@ export const awsServicesDescriptions = [
     link: ''
   },
   {
-    title: 'Amazon AccessAnalyzer',
+    title: 'Amazon Access Analyzer',
     description:
       'Start querying data instantly. Get results in seconds. Pay only for the queries you run.',
     link: ''

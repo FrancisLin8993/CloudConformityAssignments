@@ -4,12 +4,17 @@ import { KNOWLEDGE_BASE_URL } from '../../utils/helpers';
 
 function ServiceItem(props) {
   return (
-    <Card border="light">
+    <Card border="light" className="service-link">
       <Card.Body>
-        <Card.Link href={`${KNOWLEDGE_BASE_URL}${props.link}`}>
-          <h3>{props.title}</h3>
-        </Card.Link>
-        <Card.Text>{props.description}</Card.Text>
+        <h3>
+          <Card.Link
+            className="service-item-link"
+            href={`${KNOWLEDGE_BASE_URL}${props.link}`}
+          >
+            {props.title}
+          </Card.Link>
+        </h3>
+        <Card.Text className="service-item-text">{props.description}</Card.Text>
       </Card.Body>
     </Card>
   );
