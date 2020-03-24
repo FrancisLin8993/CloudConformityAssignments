@@ -237,3 +237,8 @@ a.btn-cta {
   display: flex;
   flex-wrap: wrap;
 }
+
+ul {
+  list-style: none;
+  outline: none;
+}

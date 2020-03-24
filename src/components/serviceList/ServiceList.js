@@ -1,13 +1,11 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import ServiceProviderHeading from '../serviceProviderHeading/ServiceProviderHeading';
 import cloudConfomrityInstance from '../../apis/cloudConformityApi';
 import {
-  splitArray,
   filterAttributes,
   AWS,
   AZURE,
+  KNOWLEDGE_BASE_URL,
   generateLinks,
   addLinkAttributeToArray
 } from '../../utils/helpers';
@@ -15,9 +13,8 @@ import {
   awsServicesDescriptions,
   azureServiceDescriptions
 } from '../../utils/serviceItemsDesc';
-import ServiceItem from '../serviceItem/ServiceItem';
-import ServiceProviderHeading from '../serviceProviderHeading/ServiceProviderHeading';
 import { CLOUD_CONFORMITY_BASE_URL, PROXY_URL } from '../../apis/apiUtils';
+import './ServiceList.css';
 
 // Render a serviceList.
 // props of this component could be aws or azure.
@@ -29,54 +26,35 @@ class ServiceList extends React.Component {
       headers: cloudConfomrityInstance
     })
       .then(response => response.json())
-      .then(data => {
+      .then(responseData => {
         //Generate the corresponding link for each item from the response
-        const linksArray = generateLinks(filterAttributes(data));
+        const linksArray = generateLinks(filterAttributes(responseData));
+        console.log(linksArray);
         // Load the content into an array
-        // Split the array into smaller arrays
-        // each small array contains two items
-        const splittedArray = splitArray(
-          addLinkAttributeToArray(
-            this.loadData(this.props.providerName),
-            linksArray
-          )
-        );
-        this.setState({ ruleInfoArray: splittedArray });
+        // add the corresponding link to each item of the array
+        const rulesInfo = this.loadData(this.props.providerName);
+        if (rulesInfo) {
+          const resultArray = addLinkAttributeToArray(rulesInfo, linksArray);
+          this.setState({ ruleInfoArray: resultArray });
+        }
       });
   }
 
-  // Render a row. Each row contains two ServiceItems.
-  renderRow = (rowItem, index) => {
-    return rowItem.length % 2 == 0 ? (
-      <Row key={index}>
-        <Col>
-          <ServiceItem
-            title={rowItem[0].title}
-            description={rowItem[0].description}
-            link={rowItem[0].link}
-          />
-        </Col>
-        <Col>
-          <ServiceItem
-            title={rowItem[1].title}
-            description={rowItem[1].description}
-            link={rowItem[1].link}
-          />
-        </Col>
-      </Row>
-    ) : (
-      <Row key={index}>
-        <Col>
-          <ServiceItem
-            title={rowItem[0].title}
-            description={rowItem[0].description}
-            link={rowItem[0].link}
-          />
-        </Col>
-        <Col></Col>
-      </Row>
+  // Render li element of an unordered list
+  renderListItem = (item, index) => {
+    return (
+      <li className="service-link" key={index}>
+        <h3>
+          <a href={`${KNOWLEDGE_BASE_URL}${item.link}`}>{item.title}</a>
+        </h3>
+        <p>{item.description}</p>
+      </li>
     );
   };
+
+  renderList(data) {
+    return data.map(item => this.renderListItem(item, data.indexOf(item)));
+  }
 
   // Load the content to be displayed from the external files
   loadData = providerName => {
@@ -84,19 +62,17 @@ class ServiceList extends React.Component {
       return awsServicesDescriptions;
     } else if (providerName === AZURE) {
       return azureServiceDescriptions;
+    } else {
+      return [];
     }
   };
 
   render() {
     const data = this.loadData(this.props.providerName);
-    const splittedArray = splitArray(data);
-    const serviceItemList = splittedArray.map(rowItem =>
-      this.renderRow(rowItem, data.indexOf(rowItem[0]))
-    );
     return (
       <div className="grid copy provider">
         <ServiceProviderHeading {...this.props} />
-        <Container className="service-list">{serviceItemList}</Container>
+        <ul className="service-list">{this.renderList(data)}</ul>
       </div>
     );
   }

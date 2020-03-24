@@ -1,11 +1,7 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
 import ServiceList from './ServiceList';
-import ServiceItem from '../serviceItem/ServiceItem';
 import { shallow, mount } from 'enzyme';
 
 it('renders without crashing', () => {
@@ -31,21 +27,19 @@ describe('test children elements', () => {
   it('loads data correctly', () => {
     const data1 = instance1.loadData('aws');
     const data2 = instance2.loadData('azure');
-    expect(data1).toHaveLength(6);
+    expect(data1).toHaveLength(72);
     expect(data2).toHaveLength(7);
   });
 
-  it('render rows and columns correctly', () => {
-    expect(wrapper1.find(Container)).toHaveLength(1);
-    expect(wrapper2.find(Container)).toHaveLength(1);
-    expect(wrapper1.find(Row)).toHaveLength(3);
-    expect(wrapper2.find(Row)).toHaveLength(4);
-    expect(wrapper1.find(Col)).toHaveLength(6);
-    expect(wrapper2.find(Col)).toHaveLength(8);
+  it('render lists correctly', () => {
+    expect(wrapper1.find('ul')).toHaveLength(1);
+    expect(wrapper2.find('ul')).toHaveLength(1);
+    expect(wrapper1.find('li')).toHaveLength(72);
+    expect(wrapper2.find('li')).toHaveLength(7);
   });
 
-  it('render items correctly', () => {
-    expect(wrapper1.find(ServiceItem)).toHaveLength(6);
-    expect(wrapper2.find(ServiceItem)).toHaveLength(7);
+  it('render styles correctly', () => {
+    expect(wrapper1.find('.service-list')).toHaveLength(1);
+    expect(wrapper1.find('.service-link')).toHaveLength(72);
   });
 });

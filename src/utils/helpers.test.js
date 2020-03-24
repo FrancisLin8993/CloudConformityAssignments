@@ -1,22 +1,4 @@
-import { splitArray, filterAttributes, generateLinks } from './helpers';
-
-it('should return a group of arrays, each array contains two items', () => {
-  const array = [1, 2, 3, 4, 5, 6];
-  const result = splitArray(array);
-  expect(result.length).toEqual(3);
-  expect(result[0].length).toEqual(2);
-  expect(result[1].length).toEqual(2);
-  expect(result[2].length).toEqual(2);
-});
-
-it('should return a group of arrays, the last array has one item, each of the rest arrays havs two items', () => {
-  const array = [1, 2, 3, 4, 5];
-  const result = splitArray(array);
-  expect(result.length).toEqual(3);
-  expect(result[0].length).toEqual(2);
-  expect(result[1].length).toEqual(2);
-  expect(result[2].length).toEqual(1);
-});
+import { filterAttributes, generateLinks } from './helpers';
 
 describe('tests related to cloudconformity json response', () => {
   let json = {};

@@ -3,23 +3,6 @@ export const KNOWLEDGE_BASE_URL = 'https://cloudconformity.com/knowledge-base/';
 export const AWS = 'aws';
 export const AZURE = 'azure';
 export const CONFORMITY = 'conformity';
-// split an array into arrays that each array contains two items.
-export function splitArray(arr) {
-  let rowsArray = [];
-  if (arr instanceof Array) {
-    let rowItemArray = [];
-    for (let i = 0; i <= arr.length - 1; i++) {
-      if (i === arr.length - 1) {
-        rowsArray.push([arr[i]]);
-      } else {
-        rowItemArray = arr.slice(i, i + 2);
-        rowsArray.push(rowItemArray);
-        i++;
-      }
-    }
-  }
-  return rowsArray;
-}
 
 // Function for filtering the needed attributes from the json object
 export function filterAttributes(response) {
