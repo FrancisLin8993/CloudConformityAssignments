@@ -7,10 +7,10 @@ import ProviderSelection from '../providerSelection/ProviderSelection';
 function ProviderLandingPage() {
   return (
     <div>
-      <KnowledgeBaseInfo />
-      <ProviderSelection className="grid" />
-      <ServiceList providerName={AWS} className="grid" />
-      <ServiceList providerName={AZURE} className="grid" />
+      <KnowledgeBaseInfo className="grid-section" />
+      <ProviderSelection className="grid grid-section" />
+      <ServiceList providerName={AWS} className="grid grid-section" />
+      <ServiceList providerName={AZURE} className="grid grid-section" />
     </div>
   );
 }

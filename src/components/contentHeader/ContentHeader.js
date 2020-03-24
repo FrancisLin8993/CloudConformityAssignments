@@ -10,12 +10,12 @@ function ContentHeader() {
   return (
     <div>
       <Jumbotron fluid className="ContentHeader">
-        <Container fluid className="article">
+        <Container fluid className="content-header-wrapper">
           <Row className="grid">
-            <Col>
+            <Col className="content-header-col">
               <h1>Knowledge Base</h1>
             </Col>
-            <Col>
+            <Col className="content-header-col">
               <p>
                 Cloud Conformity is a continuous assurance tool that provides
                 peace of mind for your cloud infrastructure, delivering over 520
@@ -23,7 +23,7 @@ function ContentHeader() {
               </p>
             </Col>
           </Row>
-          <Row>
+          <Row className="grid">
             <Col>
               <span>
                 <a href={KNOWLEDGE_BASE_URL}>Knowledge Base</a>
