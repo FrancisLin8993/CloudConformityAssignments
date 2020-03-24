@@ -6,11 +6,15 @@ import './ProviderSelection.css';
 
 function ProviderSelection() {
   return (
-    <CardGroup className="provider-selection">
-      <ProviderCard provider={AWS} className="card" />
-      <ProviderCard provider={AZURE} className="card" />
-      <ProviderCard provider={CONFORMITY} className="card" />
-    </CardGroup>
+    <div className="grid copy">
+      <div className="provider-selection">
+        <CardGroup>
+          <ProviderCard provider={AWS} className="card" />
+          <ProviderCard provider={AZURE} className="card" />
+          <ProviderCard provider={CONFORMITY} className="card" />
+        </CardGroup>
+      </div>
+    </div>
   );
 }
 
