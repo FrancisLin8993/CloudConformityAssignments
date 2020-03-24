@@ -1,41 +1,115 @@
-a.btn-cta {
-  width: 260px;
-  height: 60px;
-  display: block;
-  position: relative;
-  margin: 40px auto 0;
-  font-family: 'Volte-Semibold', 'Roboto', Arial, 'Helvetica Neue', Helvetica,
-    sans-serif;
-  font-size: 18px;
-  letter-spacing: -0.031em;
-  line-height: 60px;
-  color: #fff;
-  text-align: center;
-  background: #c6366e;
-  text-decoration: none;
-  border-radius: 30px;
-  box-shadow: 0 7px 40px #dbdde4;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.18s linear;
-  transition: all 0.18s linear;
+.footer-button {
+  padding: 140px 0 190px;
+  overflow: hidden;
+  z-index: 0;
 }
 
-@media screen and (min-width: 1025px) {
-  a.btn-cta:hover {
-    background: #3e2559;
-    box-shadow: 0 0 20px #dbdde4;
+@media screen and (max-width: 800px) {
+  .footer-button {
+    padding: 220px 0 100px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  a.btn-cta {
-    width: 190px;
-    height: 50px;
-    font-size: 15px;
-    letter-spacing: -0.021em;
-    line-height: 50px;
+  .footer-button {
+    padding: 120px 0 70px;
   }
+}
+
+.footer-button:after,
+.footer-button:before {
+  height: 100%;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.footer-button:after {
+  width: 1715px;
+  top: 0;
+  left: 50%;
+  margin-left: -1950px;
+  background: url(https://www.cloudconformity.com/assets/lines/line4-0955e618282f0f593d9974da63014a2bdb57ec689555921582e15d4e6b04241f.svg)
+      no-repeat,
+    -webkit-linear-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+  background: url(https://www.cloudconformity.com/assets/lines/line4-0955e618282f0f593d9974da63014a2bdb57ec689555921582e15d4e6b04241f.svg)
+      no-repeat,
+    linear-gradient(transparent, transparent);
+}
+
+@media screen and (max-width: 800px) {
+  .footer-button:after {
+    width: 2750px;
+    top: 0;
+    left: 50%;
+    margin-left: -1314px;
+    background: url(https://www.cloudconformity.com/assets/lines/line8-a68f1c84b2ed9785b6ce7d3609e3de9e9fda83aa21a98aa2ecc42a4ca2b9f4cb.svg)
+        50% 0 no-repeat,
+      -webkit-linear-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    background: url(https://www.cloudconformity.com/assets/lines/line8-a68f1c84b2ed9785b6ce7d3609e3de9e9fda83aa21a98aa2ecc42a4ca2b9f4cb.svg)
+        50% 0 no-repeat,
+      linear-gradient(transparent, transparent);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer-button:after {
+    top: 0;
+  }
+}
+
+.footer-button:before {
+  width: 1716px;
+  bottom: 100px;
+  right: 50%;
+  margin-right: -2050px;
+  background: url(/assets/lines/line5-a017fd9f67f09856727573c6fc2454ea2db22ed45d217b94f10b192108abd602.svg)
+      0 100% no-repeat,
+    -webkit-linear-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+  background: url(/assets/lines/line5-a017fd9f67f09856727573c6fc2454ea2db22ed45d217b94f10b192108abd602.svg)
+      0 100% no-repeat,
+    linear-gradient(transparent, transparent);
+}
+
+@media screen and (max-width: 800px) {
+  .footer-button:before {
+    display: none;
+  }
+}
+
+.footer-button .footer-v2 p {
+  margin-top: 35px;
+}
+
+.footer-button .footer-v2 p a {
+  color: #c6366e;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+  .footer-button .footer-v2 p:first-child {
+    display: none;
+  }
+}
+
+.footer-button p {
+  font-size: 18px;
+  letter-spacing: -0.2px;
+  line-height: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .footer-button p {
+    padding: 0 30px;
+  }
+}
+
+.footer-button p span {
+  font-weight: 700;
+  display: block;
+}
+
+.footer-button p span.full-bold {
+  display: inline;
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,10 +7,10 @@ import { KNOWLEDGE_BASE_URL } from '../../utils/helpers';
 
 function ContentHeader() {
   return (
-    <div>
-      <Jumbotron fluid className="ContentHeader">
-        <Container fluid className="content-header-wrapper">
-          <Row className="grid">
+    <div className="content-header grid-section">
+      <div className="jumbotron-view">
+        <Container fluid className="header">
+          <Row className="grid article">
             <Col className="content-header-col">
               <h1>Knowledge Base</h1>
             </Col>
@@ -31,7 +30,7 @@ function ContentHeader() {
             </Col>
           </Row>
         </Container>
-      </Jumbotron>
+      </div>
     </div>
   );
 }

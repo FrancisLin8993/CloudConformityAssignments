@@ -6,7 +6,7 @@ import ProviderSelection from '../providerSelection/ProviderSelection';
 
 function ProviderLandingPage() {
   return (
-    <div>
+    <div className="grid-section provider-landing-page">
       <KnowledgeBaseInfo />
       <ProviderSelection />
       <ServiceList providerName={AWS} />

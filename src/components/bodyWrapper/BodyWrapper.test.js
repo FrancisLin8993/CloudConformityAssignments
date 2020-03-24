@@ -17,9 +17,3 @@ it('render childrens correctly', () => {
   expect(wrapper.find(ProviderLandingPage)).toHaveLength(1);
   expect(wrapper.find(FooterButton)).toHaveLength(1);
 });
-
-it('renders styles correctly', () => {
-  const wrapper = shallow(<BodyWrapper />);
-  expect(wrapper.find('.content-header')).toHaveLength(1);
-  expect(wrapper.find('.grid-section')).toHaveLength(3);
-});
