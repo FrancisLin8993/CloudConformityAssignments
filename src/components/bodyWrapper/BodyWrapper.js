@@ -7,9 +7,9 @@ import './BodyWrapper.css';
 function BodyWrapper() {
   return (
     <div id="section-body">
-      <ContentHeader className="content-header" />
-      <ProviderLandingPage />
-      <FooterButton />
+      <ContentHeader className="content-header grid-section" />
+      <ProviderLandingPage className="grid-section provider-landing-page" />
+      <FooterButton className="grid-section" />
     </div>
   );
 }

@@ -2,9 +2,9 @@ import React from 'react';
 
 function KnowledgeBaseInfo() {
   return (
-    <div className="grid">
+    <div className="grid copy">
       <h2>Knowledge Base</h2>
-      <p>
+      <p className="lead">
         "Along with continuous assurance of your infrastructure, Cloud
         Conformity is an educational tool, providing detailed resolution steps
         to rectify security vulnerabilities, performance and cost

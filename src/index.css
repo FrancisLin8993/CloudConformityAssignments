@@ -113,3 +113,63 @@ a.cta {
   margin: 0 auto;
   padding: 0 50px;
 }
+
+.copy {
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 680px) {
+  .copy {
+    width: auto !important;
+    max-width: 100%;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+.copy h2 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.copy p {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.copy p.lead {
+  margin-top: 30px;
+  color: #3e2559;
+  font-size: 20px;
+  font-family: 'Volte-Medium', 'Roboto', Arial, 'Helvetica Neue', Helvetica,
+    sans-serif;
+}
+
+.copy p.notlead {
+  color: #3e2559;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.copy p.notlead br {
+  line-height: 35px;
+}
+
+.copy p a {
+  color: #3e2559;
+  text-decoration: underline;
+}
+
+.copy p a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  color: #3e2559;
+  font-size: 42px;
+}
+
+h3 {
+  color: #3e2559;
+  font-size: 32px;
+}
