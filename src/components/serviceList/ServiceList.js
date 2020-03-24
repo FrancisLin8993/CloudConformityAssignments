@@ -94,7 +94,7 @@ class ServiceList extends React.Component {
       this.renderRow(rowItem, data.indexOf(rowItem[0]))
     );
     return (
-      <div>
+      <div className="grid copy provider">
         <ServiceProviderHeading {...this.props} />
         <Container>{serviceItemList}</Container>
       </div>
