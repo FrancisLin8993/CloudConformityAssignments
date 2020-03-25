@@ -25,4 +25,19 @@ describe('<Navigation />', () => {
     expect(wrapper.find('.wrp-nav')).toHaveLength(1);
     expect(wrapper.find('.navigation')).toHaveLength(1);
   });
+
+  it('renders correct state when hover and unhover', () => {
+    expect(wrapper.state('isHovered')).toBe(false);
+    wrapper
+      .find('ul')
+      .childAt(1)
+      .simulate('mouseenter');
+    expect(wrapper.state('isHovered')).toBe(true);
+    expect(wrapper.find('li.active')).toHaveLength(1);
+    wrapper
+      .find('ul')
+      .childAt(1)
+      .simulate('mouseleave');
+    expect(wrapper.state('isHovered')).toBe(false);
+  });
 });

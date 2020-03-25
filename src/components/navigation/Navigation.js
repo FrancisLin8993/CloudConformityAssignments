@@ -2,50 +2,64 @@ import React from 'react';
 import './Navigation.css';
 import NavSubmenu from '../navSubmenu/NavSubmenu';
 
-function Navigation() {
-  return (
-    <nav>
-      <div className="wrp-nav">
-        <div className="navigation">
-          <ul>
-            <li>
-              <a
-                className="active"
-                href="/knowledge-base/"
-                aria-label="Knowledge Base"
+class Navigation extends React.Component {
+  state = { isHovered: false };
+
+  handleHover = () => {
+    this.setState(prevState => ({
+      isHovered: !prevState.isHovered
+    }));
+  };
+  render() {
+    const liClass = this.state.isHovered ? 'active' : '';
+    return (
+      <nav>
+        <div className="wrp-nav">
+          <div className="navigation">
+            <ul>
+              <li>
+                <a
+                  className="active"
+                  href="/knowledge-base/"
+                  aria-label="Knowledge Base"
+                >
+                  Knowledge Base
+                </a>
+              </li>
+              <li
+                className={liClass}
+                onMouseEnter={this.handleHover}
+                onMouseLeave={this.handleHover}
               >
-                Knowledge Base
+                <NavSubmenu />
+              </li>
+              <li>
+                <a href="/about.html" aria-label="About">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="/pricing.html" aria-label="Pricing">
+                  Pricing
+                </a>
+              </li>
+            </ul>
+            <div id="reg-log">
+              <a
+                href="/identity/sign-in.html"
+                title="Existing user's sign in page"
+              >
+                Sign in
               </a>
-            </li>
-            <li>
-              <NavSubmenu />
-            </li>
-            <li>
-              <a href="/about.html" aria-label="About">
-                About
+              <a href="/identity/sign-up.html" title="Sign Up">
+                Free trial
               </a>
-            </li>
-            <li>
-              <a href="/pricing.html" aria-label="Pricing">
-                Pricing
-              </a>
-            </li>
-          </ul>
-          <div id="reg-log">
-            <a
-              href="/identity/sign-in.html"
-              title="Existing user's sign in page"
-            >
-              Sign in
-            </a>
-            <a href="/identity/sign-up.html" title="Sign Up">
-              Free trial
-            </a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  );
+      </nav>
+    );
+  }
 }
 
 export default Navigation;
