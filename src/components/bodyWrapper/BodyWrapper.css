@@ -3,11 +3,3 @@
     overflow-x: hidden;
   }
 }
-
-.grid-section {
-  width: 100%;
-  float: left;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}

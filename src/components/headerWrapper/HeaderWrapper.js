@@ -4,7 +4,7 @@ import Header from '../header/Header';
 
 function HeaderWrapper() {
   return (
-    <div>
+    <div id="header-wrapper">
       <Announcement />
       <Header />
     </div>
