@@ -6,6 +6,9 @@ import {
   gcpSolutionsDesc
 } from '../../utils/solutionItemsDesc';
 import { AWS, AZURE, GCP } from '../../utils/helpers';
+import awsProductLogo from '../../assets/logo-product-aws.svg';
+import azureProductLogo from '../../assets/logo-product-azure.svg';
+import gcpProductLogo from '../../assets/logo-product-gcp.svg';
 
 class NavSubmenuItem extends React.Component {
   renderList() {
@@ -32,6 +35,18 @@ class NavSubmenuItem extends React.Component {
     }
   };
 
+  loadLogo = providerName => {
+    if (providerName === AWS) {
+      return awsProductLogo;
+    } else if (providerName === AZURE) {
+      return azureProductLogo;
+    } else if (providerName === GCP) {
+      return gcpProductLogo;
+    } else {
+      return;
+    }
+  };
+
   render() {
     const data = this.loadData(this.props.provider);
     let dataLink = '';
@@ -44,7 +59,7 @@ class NavSubmenuItem extends React.Component {
           <a href={dataLink} className="logo-href-wrapper">
             <img
               className="img-logo"
-              src="/assets/logos/logo-product-aws-fe0bb3dcdf02e650014a823f03b13263b55b39a1ed4bc2449e01a74f7bf3d2d5.svg"
+              src={this.loadLogo(this.props.provider)}
             />
           </a>
         </div>
