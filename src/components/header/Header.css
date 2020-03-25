@@ -1,0 +1,199 @@
+header {
+  position: fixed;
+  -webkit-transform: translateZ(0);
+  -webkit-transition: 0.18s height linear;
+  transition: 0.18s height linear;
+  height: 140px;
+  display: -webkit-box;
+  display: flex;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: #fff;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0 50px;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  header {
+    display: block;
+    -webkit-box-pack: inherit;
+    justify-content: inherit;
+    -webkit-box-align: inherit;
+    align-items: inherit;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  header {
+    height: 70px;
+  }
+}
+
+header:before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: white;
+  z-index: 1;
+  -webkit-transition: 0.5s background cubic-bezier(0.47, 0.63, 0.3, 0.9);
+  transition: 0.5s background cubic-bezier(0.47, 0.63, 0.3, 0.9);
+}
+
+header #logo {
+  -webkit-transition: all 0.18s linear;
+  transition: all 0.18s linear;
+  width: 360px;
+  height: 61px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: url(https://www.cloudconformity.com/assets/logos/logo-trend-micro-conformity-a9f2ff7ece6ba93793cec22de96daeba86528b2f2b937e8efdebae20db47ffa5.svg)
+    no-repeat 0 50%;
+  background-size: auto 100%;
+  -webkit-transform: translate3d(0, -1px, 0);
+  transform: translate3d(0, -1px, 0);
+}
+
+@media screen and (max-width: 980px) {
+  header #logo {
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  header #logo {
+    width: 210px;
+    height: 36px;
+    -webkit-transform: translate3d(0, 18px, 0);
+    transform: translate3d(0, 18px, 0);
+  }
+}
+
+@media (min-width: 981px) {
+  header #logo {
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+header #logo a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+header #logo img {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+a.icon-menu {
+  width: 40px;
+  height: 40px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  margin-top: -20px;
+  overflow: hidden;
+  text-indent: -9999px;
+  z-index: 100;
+  font-size: 0px;
+  color: #fff;
+}
+
+@media screen and (max-width: 1064px) {
+  a.icon-menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  a.icon-menu {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  a.icon-menu {
+    right: 15px;
+  }
+}
+
+a.icon-menu span {
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  top: 19px;
+  left: 10px;
+  background: #3e2559;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: all 0.18s linear;
+  transition: all 0.18s linear;
+}
+
+a.icon-menu span:after {
+  width: 20px;
+  height: 2px;
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  background: #3e2559;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: all 0.18s linear;
+  transition: all 0.18s linear;
+}
+
+a.icon-menu span:before {
+  width: 20px;
+  height: 2px;
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background: #3e2559;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: all 0.18s linear;
+  transition: all 0.18s linear;
+}
+
+a.icon-menu.x span {
+  background: transparent;
+}
+
+a.icon-menu.x span:after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+a.icon-menu.x span:before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}

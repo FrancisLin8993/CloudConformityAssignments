@@ -2,6 +2,7 @@
 export const KNOWLEDGE_BASE_URL = 'https://cloudconformity.com/knowledge-base/';
 export const AWS = 'aws';
 export const AZURE = 'azure';
+export const GCP = 'gcp';
 export const CONFORMITY = 'conformity';
 
 // Function for filtering the needed attributes from the json object
