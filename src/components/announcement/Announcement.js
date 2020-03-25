@@ -5,8 +5,11 @@ import trendMicroWhiteLogo from '../../assets/logo-trend-micro-white.svg';
 function Announcement() {
   return (
     <div className="announcement">
-      <a href={trendMicroWhiteLogo} target="_blank">
-        <img src="../../assets/logo-trend-micro-white-3d6cf1e9f7d589290d7251b82a27dea28333c417bfad3b0e7f878f3fb8242a87.svg" />
+      <a
+        href="https://www.trendmicro.com/en_us/business/products/hybrid-cloud/cloud-one-conformity.html"
+        target="_blank"
+      >
+        <img src={trendMicroWhiteLogo} />
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <span className="hidden-sm">
           Trend Micro acquires Cloud Conformity and is now included in
