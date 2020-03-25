@@ -242,3 +242,41 @@ ul {
   list-style: none;
   outline: none;
 }
+
+.scroll header {
+  height: 90px;
+}
+
+.scroll header:before {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 680px) {
+  .scroll header {
+    height: 70px;
+  }
+}
+
+.scroll header #logo {
+  width: 360px;
+  height: 55px;
+}
+
+@media screen and (max-width: 980px) {
+  .scroll header #logo {
+    -webkit-transform: translate3d(0, 18px, 0);
+    transform: translate3d(0, 18px, 0);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .scroll header #logo {
+    width: 210px;
+    height: 36px;
+  }
+}
+
+header.x:before {
+  background: white;
+}

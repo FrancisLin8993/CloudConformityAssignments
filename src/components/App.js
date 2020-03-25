@@ -4,14 +4,33 @@ import BodyWrapper from './bodyWrapper/BodyWrapper';
 import HeaderWrapper from './headerWrapper/HeaderWrapper';
 import FooterWrapper from './footerWrapper/FooterWrapper';
 
-function App() {
-  return (
-    <div className="App">
-      <HeaderWrapper />
-      <BodyWrapper />
-      <FooterWrapper />
-    </div>
-  );
+class App extends React.Component {
+  componentDidMount() {
+    window.addEventListener('scroll', this.toggleBodyClass);
+    this.toggleBodyClass();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.toggleBodyClass);
+  }
+
+  toggleBodyClass = () => {
+    if (window.scrollY > 0) {
+      document.body.classList.add('scroll');
+    } else {
+      document.body.classList.remove('scroll');
+    }
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <HeaderWrapper />
+        <BodyWrapper />
+        <FooterWrapper />
+      </div>
+    );
+  }
 }
 
 export default App;
