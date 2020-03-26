@@ -9,7 +9,7 @@ function NavSubmenu() {
     <React.Fragment>
       <span>
         {' '}
-        Solutions <i class="icomoon icon-arrow-down2"></i>
+        Solutions <i className="icomoon icon-arrow-down2"></i>
       </span>
       {/* The arrow icon in icomoon is not free so that i am not using icons here */}
       <div className="submenu">

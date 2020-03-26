@@ -18,4 +18,10 @@ describe('<NavSubmenu />', () => {
     expect(wrapper.find('span')).toHaveLength(1);
     expect(wrapper.find(NavSubmenuItem)).toHaveLength(3);
   });
+
+  it('renders icon correctly', () => {
+    expect(wrapper.find('i')).toHaveLength(1);
+    expect(wrapper.find('.icomoon')).toHaveLength(1);
+    expect(wrapper.find('.icon-arrow-down2')).toHaveLength(1);
+  });
 });
