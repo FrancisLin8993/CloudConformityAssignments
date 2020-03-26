@@ -28,7 +28,13 @@ class ServiceList extends React.Component {
       .then(response => response.json())
       .then(responseData => {
         //Generate the corresponding link for each item from the response
-        const filteredArr = filterAttributes(responseData);
+        const filteredArr = filterAttributes(
+          responseData,
+          this.props.providerName
+        );
+
+        filteredArr.sort((a, b) => a.name - b.name);
+        console.log(filteredArr);
         const linksArray = generateLinks(filteredArr, this.props.providerName);
         // Load the content into an array
         // add the corresponding link to each item of the array

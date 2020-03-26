@@ -72,22 +72,27 @@ describe('tests related to cloudconformity json response', () => {
   });
 
   it('should return an array of attributes inside the response of cloud conformity api', () => {
-    const result = filterAttributes(json);
+    const result = filterAttributes(json, 'aws');
 
-    expect(result.length).toEqual(3);
+    expect(result.length).toEqual(2);
     expect(result[0].name).toEqual('EBS');
     expect(result[0].provider).toEqual('aws');
     expect(result[1].name).toEqual('Route53');
     expect(result[1].provider).toEqual('aws');
+  });
+
+  it('should correctly sort items in an array', () => {
+    const result = filterAttributes(json, 'aws');
+    expect(result.length).toEqual(2);
+    expect(result[0].name).toEqual('EBS');
+    expect(result[0].provider).toEqual('aws');
     expect(result[1].name).toEqual('Route53');
     expect(result[1].provider).toEqual('aws');
-    expect(result[2].name).toEqual('StorageAccounts');
-    expect(result[2].provider).toEqual('azure');
   });
 
   it('should return the correct link', () => {
-    const attributesArr = filterAttributes(json);
-    const linksArr = generateLinks(attributesArr, 'aws');
+    const attributesArr = filterAttributes(json, 'aws');
+    const linksArr = generateLinks(attributesArr);
 
     expect(linksArr.length).toEqual(2);
     expect(linksArr[0]).toEqual('aws/EBS');
