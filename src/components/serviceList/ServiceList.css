@@ -45,29 +45,29 @@ ul.service-list li.service-link {
   break-inside: avoid;
 }
 
-ul.service-list .service-link h2 {
+ul.service-list li.service-link h2 {
   font-size: 30px;
   margin: 0px;
   margin-bottom: 10px;
 }
 
-ul.service-list .service-link h3 {
+ul.service-list li.service-link h3 {
   font-size: 20px;
   margin: 0px;
 }
 
-ul.service-list .service-link a {
+ul.service-list li.service-link a {
   color: #3e2559;
   font-size: inherit;
   font-weight: bold;
   text-decoration: none;
 }
 
-ul.service-list .service-link a:hover {
+ul.service-list li.service-link a:hover {
   text-decoration: underline;
 }
 
-ul.service-list .service-link p {
+ul.service-list li.service-link p {
   padding-top: 5px;
   font-size: unset;
 }
