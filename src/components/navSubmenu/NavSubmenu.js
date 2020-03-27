@@ -11,7 +11,7 @@ function NavSubmenu() {
         {' '}
         Solutions <i className="icomoon icon-arrow-down2"></i>
       </span>
-      {/* The arrow icon in icomoon is not free so that i am not using icons here */}
+      {/* The arrow icon on your website in icomoon is not free so that i use another similar icon instead. */}
       <div className="submenu">
         <div className="submenu-container">
           <NavSubmenuItem provider={AWS} />
