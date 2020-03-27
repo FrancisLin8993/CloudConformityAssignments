@@ -46,13 +46,23 @@
     border: none !important;
   }
 
-  .card img {
+  .card .card-img-top {
     margin: auto;
     display: block;
   }
 }
 
-.provider-selection .card-group .card > * {
+.provider-selection .card-group .card .card-img-top {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.provider-selection .card-group .card .card-body {
+  display: inline-block;
+  padding: 0;
+}
+
+.provider-selection .card-group .card .card-body .card-link {
   display: inline-block;
   margin-bottom: 20px;
 }
