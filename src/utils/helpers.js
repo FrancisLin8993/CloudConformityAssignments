@@ -12,7 +12,7 @@ export function filterAttributes(response, providerName) {
   const attributeArray = [];
   if (dataArray instanceof Array) {
     filteredArr = dataArray.filter(
-      element => element.attributes.provider == providerName
+      element => element.attributes.provider === providerName
     );
 
     filteredArr.forEach(element => {

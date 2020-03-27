@@ -50,7 +50,7 @@ class NavSubmenuItem extends React.Component {
   render() {
     const data = this.loadData(this.props.provider);
     let dataLink = '';
-    if (data.length != 0) {
+    if (data.length !== 0) {
       dataLink = data[0].link;
     }
     return (
@@ -60,6 +60,7 @@ class NavSubmenuItem extends React.Component {
             <img
               className="img-logo"
               src={this.loadLogo(this.props.provider)}
+              alt={this.props.provider}
             />
           </a>
         </div>

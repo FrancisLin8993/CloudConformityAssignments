@@ -12,7 +12,7 @@ import './ServiceProviderHeading.css';
 class ServiceProviderHeading extends React.Component {
   renderImgAndLInk() {
     const providerName = transformProviderName(this.props.providerName);
-    if (this.props.providerName == AWS) {
+    if (this.props.providerName === AWS) {
       return (
         <div>
           <img alt="Service coverage for Amazon Web Services" src={awsLogo} />
@@ -22,7 +22,7 @@ class ServiceProviderHeading extends React.Component {
           </a>
         </div>
       );
-    } else if (this.props.providerName == AZURE) {
+    } else if (this.props.providerName === AZURE) {
       return (
         <div>
           <img alt="Service coverage for Azure Services" src={azureLogo} />

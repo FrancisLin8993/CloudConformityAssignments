@@ -6,7 +6,7 @@ function Header() {
   return (
     <header>
       <div id="logo">
-        <a href="/" title="Cloud Conformith Homepage"></a>
+        <a href="/" title="Cloud Conformity Homepage"></a>
       </div>
       <a className="icon-menu" href="#" data-target="header">
         <span>Open menu</span>

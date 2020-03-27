@@ -8,8 +8,9 @@ function Announcement() {
       <a
         href="https://www.trendmicro.com/en_us/business/products/hybrid-cloud/cloud-one-conformity.html"
         target="_blank"
+        rel="noopener noreferrer"
       >
-        <img src={trendMicroWhiteLogo} />
+        <img src={trendMicroWhiteLogo} alt="Trend Micro" />
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <span className="hidden-sm">
           Trend Micro acquires Cloud Conformity and is now included in
