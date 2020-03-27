@@ -22,6 +22,7 @@ export function filterAttributes(response, providerName) {
   return attributeArray;
 }
 
+// Function of generating links for each item of the corresponding response
 export function generateLinks(arr) {
   sortItems(arr);
   const linksArray = [];

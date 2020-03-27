@@ -14,6 +14,8 @@ class App extends React.Component {
     window.removeEventListener('scroll', this.toggleBodyClass);
   }
 
+  // When starting scrolling, add the 'scroll' class in the body tag to achieve corresponing effect.
+  // When scrolling back to the top of the page, remove the scroll class.
   toggleBodyClass = () => {
     if (window.scrollY > 0) {
       document.body.classList.add('scroll');

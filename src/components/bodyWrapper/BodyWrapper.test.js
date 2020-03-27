@@ -4,7 +4,7 @@ import BodyWrapper from './BodyWrapper';
 import ContentHeader from '../contentHeader/ContentHeader';
 import ProviderLandingPage from '../providerLandingPage/ProviderLandingPage';
 import FooterButton from '../footerButton/FooterButton';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

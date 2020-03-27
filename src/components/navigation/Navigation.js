@@ -3,8 +3,10 @@ import './Navigation.css';
 import NavSubmenu from '../navSubmenu/NavSubmenu';
 
 class Navigation extends React.Component {
+  //Initial a state representing whether the solutions tab is hovered.
   state = { isHovered: false };
 
+  //Switch the state of the component
   handleHover = () => {
     this.setState(prevState => ({
       isHovered: !prevState.isHovered

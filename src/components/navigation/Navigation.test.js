@@ -26,6 +26,7 @@ describe('<Navigation />', () => {
     expect(wrapper.find('.navigation')).toHaveLength(1);
   });
 
+  //Simulate the mouse event when testing.
   it('renders correct state when hover and unhover', () => {
     expect(wrapper.state('isHovered')).toBe(false);
     wrapper
