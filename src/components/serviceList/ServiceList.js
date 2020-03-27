@@ -1,6 +1,6 @@
 import React from 'react';
 import ServiceProviderHeading from '../serviceProviderHeading/ServiceProviderHeading';
-import cloudConfomrityInstance from '../../apis/cloudConformityApi';
+import cloudConformityRequestHeader from '../../apis/cloudConformityApi';
 import {
   filterAttributes,
   AWS,
@@ -23,7 +23,7 @@ class ServiceList extends React.Component {
   componentDidMount() {
     // Concat the url of the proxy and the backend api
     fetch(`${PROXY_URL}${CLOUD_CONFORMITY_BASE_URL}services`, {
-      headers: cloudConfomrityInstance
+      headers: cloudConformityRequestHeader
     })
       .then(response => response.json())
       .then(responseData => {
