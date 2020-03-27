@@ -63,10 +63,10 @@
   bottom: 100px;
   right: 50%;
   margin-right: -2050px;
-  background: url(/assets/lines/line5-a017fd9f67f09856727573c6fc2454ea2db22ed45d217b94f10b192108abd602.svg)
+  background: url(https://www.cloudconformity.com/assets/lines/line5-a017fd9f67f09856727573c6fc2454ea2db22ed45d217b94f10b192108abd602.svg)
       0 100% no-repeat,
     -webkit-linear-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-  background: url(/assets/lines/line5-a017fd9f67f09856727573c6fc2454ea2db22ed45d217b94f10b192108abd602.svg)
+  background: url(https://www.cloudconformity.com/assets/lines/line5-a017fd9f67f09856727573c6fc2454ea2db22ed45d217b94f10b192108abd602.svg)
       0 100% no-repeat,
     linear-gradient(transparent, transparent);
 }
