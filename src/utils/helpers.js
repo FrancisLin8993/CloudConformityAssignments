@@ -56,3 +56,13 @@ export function addLinkAttributeToArray(targetArr, linksArr) {
   }
   return targetArr;
 }
+
+export function transformProviderName(providerName) {
+  if (providerName === AWS) {
+    providerName = providerName.toUpperCase();
+  } else if (providerName === AZURE) {
+    // Capitalise the first letter of the word
+    providerName = providerName.charAt(0).toUpperCase() + providerName.slice(1);
+  }
+  return providerName;
+}

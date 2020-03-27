@@ -1,6 +1,11 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { AWS, AZURE, CONFORMITY } from '../../utils/helpers';
+import {
+  AWS,
+  AZURE,
+  CONFORMITY,
+  transformProviderName
+} from '../../utils/helpers';
 import awsLogo from '../../assets/logo-square-aws.png';
 import azureLogo from '../../assets/logo-square-azure.png';
 import conformityLogo from '../../assets/logo-square-trend-micro.png';
@@ -28,19 +33,21 @@ class ProviderCard extends React.Component {
         </Card.Link>
       );
     } else {
+      const transformedProvider = transformProviderName(this.props.provider);
       return (
         <Card.Link
           className="cta"
           href="#"
-        >{`${this.props.provider} supported Services`}</Card.Link>
+        >{`${transformedProvider} supported Services`}</Card.Link>
       );
     }
   }
 
   renderLinks() {
     if (!this.isProviderConformity()) {
+      const transformedProvider = transformProviderName(this.props.provider);
       return (
-        <Card.Link href="#">View all {this.props.provider} rules</Card.Link>
+        <Card.Link href="#">View all {transformedProvider} rules</Card.Link>
       );
     }
   }

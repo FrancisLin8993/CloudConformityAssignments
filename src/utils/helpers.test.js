@@ -1,4 +1,8 @@
-import { filterAttributes, generateLinks } from './helpers';
+import {
+  filterAttributes,
+  generateLinks,
+  transformProviderName
+} from './helpers';
 
 describe('tests related to cloudconformity json response', () => {
   let json = {};
@@ -98,4 +102,11 @@ describe('tests related to cloudconformity json response', () => {
     expect(linksArr[0]).toEqual('aws/EBS');
     expect(linksArr[1]).toEqual('aws/Route53');
   });
+});
+
+it('should transform provider names correctly', () => {
+  const aws = transformProviderName('aws');
+  const azure = transformProviderName('azure');
+  expect(aws).toEqual('AWS');
+  expect(azure).toEqual('Azure');
 });
