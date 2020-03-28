@@ -23,7 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # api keys
-/src/apis/apiKeys.js
+src/apis/apiKeys.js
 
 # vscode files
 /.vscode
+
